@@ -11,6 +11,10 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Completed Evaluations</h4>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary mr-2" onclick="window.print()">Print</button>
+                                    <button class="btn btn-success" onclick="exportToExcel()">Export to Excel</button>
+                                </div>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -29,4 +33,9 @@
                     </div>
                 </div>
             </div>
+<script>
+    function exportToExcel() {
+        window.location.href = '../api.php?action=export_evaluations';
+    }
+</script>
 <?php include '../templates/footer.php'; ?>

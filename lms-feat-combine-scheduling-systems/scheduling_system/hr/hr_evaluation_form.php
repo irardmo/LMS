@@ -10,11 +10,15 @@
                     <div class="col-md-12 grid-margin">
                         <div class="card">
                             <div class="card-body">
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary mr-2" id="edit-questions-btn">Edit Questions</button>
+                                    <button class="btn btn-success" id="save-questions-btn" style="display: none;">Save Questions</button>
+                                </div>
                                 <form class="forms-sample">
                                     <div class="evaluation-section">
                                         <h4 class="card-title">Mastery of the subject matter:</h4>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Taught without reading notes.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Taught without reading notes.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q1" value="5"> 5</label>
@@ -34,7 +38,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Provide examples to illustrate difficult terms or concept.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Provide examples to illustrate difficult terms or concept.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q2" value="5"> 5</label>
@@ -54,7 +58,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Gave accurate answers to student's questions.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Gave accurate answers to student's questions.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q3" value="5"> 5</label>
@@ -74,7 +78,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Related the topic to real-life situations.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Related the topic to real-life situations.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q4" value="5"> 5</label>
@@ -94,7 +98,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Related the subject matter to other fields.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Related the subject matter to other fields.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q5" value="5"> 5</label>
@@ -114,7 +118,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">The day's lesson was drawn from the curriculum guide/syllabus.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>The day's lesson was drawn from the curriculum guide/syllabus.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q6" value="5"> 5</label>
@@ -137,7 +141,7 @@
                                     <div class="evaluation-section">
                                         <h4 class="card-title">Communication Skills:</h4>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Used correct grammar in speaking (English or Tagalog).</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Used correct grammar in speaking (English or Tagalog).</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q7" value="5"> 5</label>
@@ -157,7 +161,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Maintained eye contact with the students.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Maintained eye contact with the students.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q8" value="5"> 5</label>
@@ -177,7 +181,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Considered and used students' ideas and suggestions.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Considered and used students' ideas and suggestions.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q9" value="5"> 5</label>
@@ -197,7 +201,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Asking probing questions.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Asking probing questions.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q10" value="5"> 5</label>
@@ -217,7 +221,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Spoke in a voice that is clear and loud enough to be heard by everyone.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Spoke in a voice that is clear and loud enough to be heard by everyone.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q11" value="5"> 5</label>
@@ -240,7 +244,7 @@
                                     <div class="evaluation-section">
                                         <h4 class="card-title">Classroom Management:</h4>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Seating arrangement was in accordance with the seat plan.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Seating arrangement was in accordance with the seat plan.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q12" value="5"> 5</label>
@@ -260,7 +264,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Orderliness and cleanliness of the classroom was maintained.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Orderliness and cleanliness of the classroom was maintained.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q13" value="5"> 5</label>
@@ -280,7 +284,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Discipline was observed among the students.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Discipline was observed among the students.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q14" value="5"> 5</label>
@@ -300,7 +304,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">Instructional materials were in placed.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>Instructional materials were in placed.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q15" value="5"> 5</label>
@@ -320,7 +324,7 @@
                                             </div>
                                         </div>
                                         <div class="evaluation-question">
-                                            <span class="question-text">The over-all atmosphere of the classroom is conducive to learning.</span>
+                                            <textarea class="form-control question-text" rows="2" readonly>The over-all atmosphere of the classroom is conducive to learning.</textarea>
                                             <div class="rating-group">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label"><input type="radio" class="form-check-input" name="q16" value="5"> 5</label>
@@ -353,4 +357,43 @@
                     </div>
                 </div>
             </div>
+<script>
+    document.getElementById('edit-questions-btn').addEventListener('click', function() {
+        var textareas = document.querySelectorAll('.question-text');
+        textareas.forEach(function(textarea) {
+            textarea.readOnly = false;
+        });
+        document.getElementById('edit-questions-btn').style.display = 'none';
+        document.getElementById('save-questions-btn').style.display = 'block';
+    });
+    document.getElementById('save-questions-btn').addEventListener('click', async function() {
+        var textareas = document.querySelectorAll('.question-text');
+        var questions = [];
+        textareas.forEach(function(textarea, index) {
+            questions.push({
+                id: index + 1,
+                text: textarea.value
+            });
+            textarea.readOnly = true;
+        });
+        document.getElementById('edit-questions-btn').style.display = 'block';
+        document.getElementById('save-questions-btn').style.display = 'none';
+
+        const formData = new FormData();
+        formData.append('action', 'update_evaluation_questions');
+        formData.append('questions', JSON.stringify(questions));
+
+        const response = await fetch('../api.php', {
+            method: 'POST',
+            body: formData,
+        });
+
+        const result = await response.json();
+        if (result.status === 'error') {
+            alert(result.message);
+        } else {
+            alert(result.message);
+        }
+    });
+</script>
 <?php include '../templates/footer.php'; ?>

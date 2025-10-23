@@ -34,8 +34,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hr_upload_documents.php">
-                        <span class="menu-title">Upload Documents</span>
+                    <a class="nav-link" href="employee_registration.php">
+                        <span class="menu-title">Employee Registration</span>
                     </a>
                 </li>
             </ul>
