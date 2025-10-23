@@ -435,6 +435,21 @@ document.addEventListener("DOMContentLoaded", function() {
     openTab(null, 'AdminLoad');
     document.querySelector('.nav-link').classList.add('active');
 });
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.querySelectorAll(".nav-link");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+    document.getElementById(tabName).style.display = "block";
+    if (evt) {
+        evt.currentTarget.classList.add("active");
+    }
+}
 
 fetchSchedules();
 fetchAdminLoad();
