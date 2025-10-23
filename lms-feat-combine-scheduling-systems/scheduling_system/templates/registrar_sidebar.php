@@ -7,35 +7,42 @@
                             <img class="img-xs rounded-circle" src="../logo.png" alt="profile image">
                         </div>
                         <div class="text-wrapper">
-                            <p class="profile-name">Admin</p>
-                            <p class="designation">Administrator</p>
+                            <p class="profile-name">Registrar</p>
+                            <p class="designation">Registrar</p>
                         </div>
                     </a>
                 </li>
                 <li class="nav-item nav-category">
                     <span class="nav-link">Dashboard</span>
                 </li>
-                <li class="nav-item nav-category">
-                    <span class="nav-link">HR</span>
-                </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="dashboard.php">
                         <span class="menu-title">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hr_evaluation_form.php">
-                        <span class="menu-title">Evaluation Form</span>
+                    <a class="nav-link" href="student_registration.php">
+                        <span class="menu-title">Student Registration</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hr_manage_evaluations.php">
-                        <span class="menu-title">Manage Evaluations</span>
+                    <a class="nav-link" href="class_list.php">
+                        <span class="menu-title">Class List</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hr_upload_documents.php">
-                        <span class="menu-title">Upload Documents</span>
+                    <a class="nav-link" href="master_list.php">
+                        <span class="menu-title">Master List</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="requests.php">
+                        <span class="menu-title">Requests</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="upload_requirements.php">
+                        <span class="menu-title">Upload Requirements</span>
                     </a>
                 </li>
             </ul>

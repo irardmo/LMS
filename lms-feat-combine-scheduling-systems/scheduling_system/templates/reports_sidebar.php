@@ -7,35 +7,32 @@
                             <img class="img-xs rounded-circle" src="../logo.png" alt="profile image">
                         </div>
                         <div class="text-wrapper">
-                            <p class="profile-name">Admin</p>
-                            <p class="designation">Administrator</p>
+                            <p class="profile-name">Reports</p>
+                            <p class="designation">Reports</p>
                         </div>
                     </a>
                 </li>
                 <li class="nav-item nav-category">
                     <span class="nav-link">Dashboard</span>
                 </li>
-                <li class="nav-item nav-category">
-                    <span class="nav-link">HR</span>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="dashboard.php">
-                        <span class="menu-title">Dashboard</span>
+                <li class="nav-item">
+                    <a class="nav-link" href="attendance_reports.php">
+                        <span class="menu-title">Attendance Reports</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hr_evaluation_form.php">
-                        <span class="menu-title">Evaluation Form</span>
+                    <a class="nav-link" href="grade_reports.php">
+                        <span class="menu-title">Grade Reports</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hr_manage_evaluations.php">
-                        <span class="menu-title">Manage Evaluations</span>
+                    <a class="nav-link" href="finance_reports.php">
+                        <span class="menu-title">Finance Reports</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hr_upload_documents.php">
-                        <span class="menu-title">Upload Documents</span>
+                    <a class="nav-link" href="evaluation_reports.php">
+                        <span class="menu-title">Evaluation Reports</span>
                     </a>
                 </li>
             </ul>

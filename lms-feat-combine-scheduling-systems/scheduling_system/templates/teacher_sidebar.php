@@ -7,35 +7,42 @@
                             <img class="img-xs rounded-circle" src="../logo.png" alt="profile image">
                         </div>
                         <div class="text-wrapper">
-                            <p class="profile-name">Admin</p>
-                            <p class="designation">Administrator</p>
+                            <p class="profile-name">Teacher</p>
+                            <p class="designation">Teacher</p>
                         </div>
                     </a>
                 </li>
                 <li class="nav-item nav-category">
                     <span class="nav-link">Dashboard</span>
                 </li>
-                <li class="nav-item nav-category">
-                    <span class="nav-link">HR</span>
-                </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="dashboard.php">
                         <span class="menu-title">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hr_evaluation_form.php">
-                        <span class="menu-title">Evaluation Form</span>
+                    <a class="nav-link" href="subject_load.php">
+                        <span class="menu-title">Subject Load</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hr_manage_evaluations.php">
-                        <span class="menu-title">Manage Evaluations</span>
+                    <a class="nav-link" href="attendance.php">
+                        <span class="menu-title">Attendance</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hr_upload_documents.php">
-                        <span class="menu-title">Upload Documents</span>
+                    <a class="nav-link" href="upload_grades.php">
+                        <span class="menu-title">Upload Grades</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="request_grade_change.php">
+                        <span class="menu-title">Request Grade Change</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="view_schedule.php">
+                        <span class="menu-title">View Schedule</span>
                     </a>
                 </li>
             </ul>
