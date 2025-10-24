@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $output = fopen('php://output', 'w');
             fputcsv($output, array('ID', 'Employee Name', 'Employee ID', 'Evaluation Date'));
 
-            $sql = "SELECT * FROM evaluations"; // This table does not exist yet. This is a placeholder.
+            $sql = "SELECT * FROM evaluations";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -70,6 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $sql = "SELECT * FROM schedules";
     $params = array();
     $types = "";
+    $where = array();
 
     if (isset($_GET['teacher'])) {
         $where[] = "teacher = ?";

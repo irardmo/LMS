@@ -11,6 +11,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="../assets/js/off-canvas.js"></script>
 <script src="../assets/js/misc.js"></script>
-<script src="script.js"></script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

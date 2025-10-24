@@ -1,5 +1,6 @@
-const form = document.getElementById('schedule-form');
-const adminLoadForm = document.getElementById('admin-load-form');
+if (document.getElementById('schedule-form')) {
+    const form = document.getElementById('schedule-form');
+    const adminLoadForm = document.getElementById('admin-load-form');
 const tableBody = document.querySelector('#schedule-table tbody');
 const adminLoadTableBody = document.querySelector('#admin-load-table tbody');
 const filterButton = document.getElementById('filter-button');
@@ -368,3 +369,4 @@ document.getElementsByClassName("tablinks")[0].click();
 
 fetchSchedules();
 fetchAdminLoad();
+}
