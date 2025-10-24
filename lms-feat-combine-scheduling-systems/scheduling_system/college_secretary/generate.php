@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require '../db.php';
 
 $subject = $_POST['subject'];
 $course_names = $_POST['course_names'];
