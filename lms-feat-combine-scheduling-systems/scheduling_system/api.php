@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "scheduling_system";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (isset($_GET['action'])) {
@@ -163,10 +152,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 echo json_encode(array("status" => "error", "message" => "Conflict detected!"));
             } else {
                 $stmt = $conn->prepare("INSERT INTO schedules (teacher, room, day, time_start, time_end, year, block, subject, course, lec, lab) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                $stmt->bind_param("sssssssssii", $_POST['teacher'], $_POST['room'], $_POST['day'], $_POST['time_start'], $_POST['time_end'], $_POST['year'], $_POST['block'], $_POST['subject'], $_POST['course'], $_POST['lec'], $_POST['lab']);
+                $stmt->bind_param("sssssssssss", $_POST['teacher'], $_POST['room'], $_POST['day'], $_POST['time_start'], $_POST['time_end'], $_POST['year'], $_POST['block'], $_POST['subject'], $_POST['course'], $_POST['lec'], $_POST['lab']);
 
                 if ($stmt->execute()) {
                     echo json_encode(array("status" => "success", "message" => "New record created successfully"));
+                .
                 } else {
                     echo json_encode(array("status" => "error", "message" => "Error: " . $stmt->error));
                 }
@@ -176,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($_POST['action'] == 'update_schedule') {
             $stmt = $conn->prepare("UPDATE schedules SET teacher=?, room=?, day=?, time_start=?, time_end=?, year=?, block=?, subject=?, course=?, lec=?, lab=? WHERE id=?");
-            $stmt->bind_param("sssssssssiii", $_POST['teacher'], $_POST['room'], $_POST['day'], $_POST['time_start'], $_POST['time_end'], $_POST['year'], $_POST['block'], $_POST['subject'], $_POST['course'], $_POST['lec'], $_POST['lab'], $_POST['id']);
+            $stmt->bind_param("sssssssssssi", $_POST['teacher'], $_POST['room'], $_POST['day'], $_POST['time_start'], $_POST['time_end'], $_POST['year'], $_POST['block'], $_POST['subject'], $_POST['course'], $_POST['lec'], $_POST['lab'], $_POST['id']);
 
             if ($stmt->execute()) {
                 echo json_encode(array("status" => "success", "message" => "Record updated successfully"));
