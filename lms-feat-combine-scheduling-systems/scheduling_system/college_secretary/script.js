@@ -137,6 +137,7 @@ const fetchSchedules = async (params = {}) => {
     const query = new URLSearchParams(params).toString();
     const response = await fetch(`api.php?${query}`);
     schedules = await response.json();
+    console.log('Fetched schedules:', schedules); // Added for debugging
     displaySchedules(1);
     displayGeneratedSchedules();
 };

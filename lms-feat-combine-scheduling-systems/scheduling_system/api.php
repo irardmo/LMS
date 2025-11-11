@@ -156,7 +156,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 if ($stmt->execute()) {
                     echo json_encode(array("status" => "success", "message" => "New record created successfully"));
-                .
                 } else {
                     echo json_encode(array("status" => "error", "message" => "Error: " . $stmt->error));
                 }
