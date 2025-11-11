@@ -9,8 +9,8 @@ CREATE TABLE `schedules` (
   `block` varchar(255) NOT NULL,
   `subject` varchar(255) NOT NULL,
   `course` varchar(255) NOT NULL,
-  `lec` INT DEFAULT NULL,
-  `lab` INT DEFAULT NULL,
+  `lec` varchar(255) DEFAULT NULL,
+  `lab` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -24,3 +24,24 @@ CREATE TABLE `admin_load` (
   `hours` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `evaluations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `employee_name` varchar(255) NOT NULL,
+  `employee_id` varchar(255) NOT NULL,
+  `evaluation_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `evaluation_questions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `question` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `evaluation_questions` (`question`) VALUES
+('Clarity of presentation'),
+('Organization of the course'),
+('Knowledge of the subject matter'),
+('Enthusiasm for teaching'),
+('Fairness of grading');
