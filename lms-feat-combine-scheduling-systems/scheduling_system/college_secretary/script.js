@@ -135,14 +135,14 @@ const setupAdminLoadPagination = () => {
 
 const fetchSchedules = async (params = {}) => {
     const query = new URLSearchParams(params).toString();
-    const response = await fetch(`api.php?${query}`);
+    const response = await fetch(`../api.php?${query}`);
     schedules = await response.json();
     displaySchedules(1);
     displayGeneratedSchedules();
 };
 
 const fetchAdminLoad = async () => {
-    const response = await fetch('api.php?action=get_admin_load');
+    const response = await fetch('../api.php?action=get_admin_load');
     adminLoads = await response.json();
     displayAdminLoads(1);
 };
@@ -162,7 +162,7 @@ form.addEventListener('submit', async (e) => {
     const action = id ? 'update_schedule' : 'add_schedule';
     formData.append('action', action);
 
-    const response = await fetch('api.php', {
+    const response = await fetch('../api.php', {
         method: 'POST',
         body: formData,
     });
@@ -185,7 +185,7 @@ adminLoadForm.addEventListener('submit', async (e) => {
     const action = id ? 'update_admin_load' : 'add_admin_load';
     formData.append('action', action);
 
-    const response = await fetch('api.php', {
+    const response = await fetch('../api.php', {
         method: 'POST',
         body: formData,
     });
@@ -224,10 +224,10 @@ document.getElementById('print-button').addEventListener('click', () => {
 
     const printWindow = window.open('print.html', '_blank');
     printWindow.onload = async () => {
-        const scheduleResponse = await fetch(`api.php?teacher=${teacher}`);
+        const scheduleResponse = await fetch(`../api.php?teacher=${teacher}`);
         const schedules = await scheduleResponse.json();
 
-        const adminLoadResponse = await fetch(`api.php?action=get_admin_load&teacher=${teacher}`);
+        const adminLoadResponse = await fetch(`../api.php?action=get_admin_load&teacher=${teacher}`);
         const adminLoads = await adminLoadResponse.json();
 
         const printDoc = printWindow.document;
@@ -307,7 +307,7 @@ document.getElementById('print-button').addEventListener('click', () => {
 });
 
 const editSchedule = async (id) => {
-    const response = await fetch(`api.php?action=get_schedule&id=${id}`);
+    const response = await fetch(`../api.php?action=get_schedule&id=${id}`);
     const schedule = await response.json();
 
     document.getElementById('edit-schedule-id').value = schedule.id;
@@ -326,7 +326,7 @@ const editSchedule = async (id) => {
 
 const deleteSchedule = async (id) => {
     if (confirm('Are you sure you want to delete this record?')) {
-        const response = await fetch('api.php', {
+        const response = await fetch('../api.php', {
             method: 'POST',
             body: new URLSearchParams({
                 action: 'delete_schedule',
@@ -345,7 +345,7 @@ const deleteSchedule = async (id) => {
 };
 
 const editAdminLoad = async (id) => {
-    const response = await fetch(`api.php?action=get_admin_load&id=${id}`);
+    const response = await fetch(`../api.php?action=get_admin_load&id=${id}`);
     const load = await response.json();
 
     document.getElementById('edit-admin-load-id').value = load.id;
@@ -359,7 +359,7 @@ const editAdminLoad = async (id) => {
 
 const deleteAdminLoad = async (id) => {
     if (confirm('Are you sure you want to delete this record?')) {
-        const response = await fetch('api.php', {
+        const response = await fetch('../api.php', {
             method: 'POST',
             body: new URLSearchParams({
                 action: 'delete_admin_load',
