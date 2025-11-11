@@ -1,0 +1,11 @@
+Verification failed: Locator expected to be visible
+Actual value: hidden
+Call log:
+  - Expect "to_be_visible" with timeout 10000ms
+  - waiting for locator("#schedule-table tbody")
+    14 × locator resolved to <tbody>↵                                </tbody>
+       - unexpected value "hidden"
+
+Screenshot saved to error_screenshot.png
+Navigating to the college secretary dashboard...
+Waiting for the schedule table to be visible...
