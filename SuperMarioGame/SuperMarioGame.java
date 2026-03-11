@@ -7,6 +7,10 @@ public class SuperMarioGame extends PApplet {
     float cameraX = 0;
     int gameState = 0; // 0: Start, 1: Play, 2: Dead, 3: Win
 
+    // Input Flags
+    boolean movingLeft = false;
+    boolean movingRight = false;
+
     /**
      * Level Layout:
      * 0 = Empty Space (Gap)
@@ -35,6 +39,8 @@ public class SuperMarioGame extends PApplet {
         player = new Player(100, 200);
         platforms.clear();
         cameraX = 0;
+        movingLeft = false;
+        movingRight = false;
 
         // Build the level based on the map
         for (int i = 0; i < levelMap.length; i++) {
@@ -105,10 +111,8 @@ public class SuperMarioGame extends PApplet {
             vel.y += gravity;
             pos.add(vel);
 
-            if (keyPressed) {
-                if (keyCode == LEFT) pos.x -= 6;
-                if (keyCode == RIGHT) pos.x += 6;
-            }
+            if (movingLeft) pos.x -= 6;
+            if (movingRight) pos.x += 6;
         }
 
         void display() {
@@ -184,6 +188,8 @@ public class SuperMarioGame extends PApplet {
 
     public void keyPressed() {
         if (gameState == 1) {
+            if (keyCode == LEFT) movingLeft = true;
+            if (keyCode == RIGHT) movingRight = true;
             if ((key == ' ' || keyCode == UP) && player.grounded) {
                 player.vel.y = -15; // High jump for challenge
             }
@@ -193,6 +199,11 @@ public class SuperMarioGame extends PApplet {
                 resetGame();
             }
         }
+    }
+
+    public void keyReleased() {
+        if (keyCode == LEFT) movingLeft = false;
+        if (keyCode == RIGHT) movingRight = false;
     }
 
     void showScreen() {

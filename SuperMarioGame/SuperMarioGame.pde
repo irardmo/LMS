@@ -4,6 +4,10 @@ ArrayList<Platform> platforms = new ArrayList<Platform>();
 float cameraX = 0;
 int gameState = 0; // 0: Start, 1: Play, 2: Dead, 3: Win
 
+// Input Flags
+boolean movingLeft = false;
+boolean movingRight = false;
+
 /**
  * Level Layout:
  * 0 = Empty Space (Gap)
@@ -29,6 +33,8 @@ void resetGame() {
   player = new Player(100, 200);
   platforms.clear();
   cameraX = 0;
+  movingLeft = false;
+  movingRight = false;
 
   // Build the level based on the map
   for (int i = 0; i < levelMap.length; i++) {
@@ -99,10 +105,9 @@ class Player {
     vel.y += gravity;
     pos.add(vel);
 
-    if (keyPressed) {
-      if (keyCode == LEFT) pos.x -= 6;
-      if (keyCode == RIGHT) pos.x += 6;
-    }
+    // Use flags for movement to allow simultaneous jump/move
+    if (movingLeft) pos.x -= 6;
+    if (movingRight) pos.x += 6;
   }
 
   void display() {
@@ -178,6 +183,8 @@ class Platform {
 
 void keyPressed() {
   if (gameState == 1) {
+    if (keyCode == LEFT) movingLeft = true;
+    if (keyCode == RIGHT) movingRight = true;
     if ((key == ' ' || keyCode == UP) && player.grounded) {
       player.vel.y = -15; // High jump for challenge
     }
@@ -187,6 +194,11 @@ void keyPressed() {
       resetGame();
     }
   }
+}
+
+void keyReleased() {
+  if (keyCode == LEFT) movingLeft = false;
+  if (keyCode == RIGHT) movingRight = false;
 }
 
 void showScreen() {
